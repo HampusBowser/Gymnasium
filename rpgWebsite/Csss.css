@@ -1,0 +1,269 @@
+/* Ändra trackcolorn */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Färg på bakgrundstracket */
+::-webkit-scrollbar-track {
+    background-color: #0A323C;
+}
+
+/* Byta färg på scrollpunkten */
+::-webkit-scrollbar-thumb {
+    background-color: #FBB03B;
+}
+/* font för titlar */
+@font-face {
+  font-family: "Titel";
+  src: url("BreatheFireIi-2z9W.ttf") format('woff2');
+}
+/* font för undertexter */
+@font-face {
+  font-family: "Undertext";
+  src: url("JmharkhamRegular-olD0.ttf") format('woff2');
+}
+/* egenskaper för h1 */
+h1{
+	font-family: "Titel", san-serif;
+}
+/* egenskaper för p, h2, h3 */
+p,h2,h3{
+	font-family: "Undertext", san-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	height:100vh;
+	scroll-behavior: smooth;
+}
+/* egenskaper för navigationbaren */ 
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1px;
+	background: #091428;
+
+}
+/* egenskaper för knapparna på navbaren */
+nav button {
+    flex: 1;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 35px;
+	font-family: "Titel", san-serif;
+}
+/* egenskaper när knapp hålls över */
+nav button:hover{
+	background-color: #0397AB;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+	align-items: center;
+    background-image: url("BakgrundsbildFramsida.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+	background-position: center;
+	padding: 2.5%;
+}
+/* egenskaper för main på Arcane sida */
+.mainARCANE{
+    background-image: url("ArcaneBackground.png");
+	justify-content: flex-end;
+}
+/* egenskaper för main på More sida */
+.mainMORE{
+	background-image:url("MoreBackground.png");
+}
+/* egenskaper för main på Games sida */
+.mainGAMES{
+	background-image:url("GamesBackground.png");
+}
+/* egenskaper för main på RPG sida */
+.mainRPG{
+	background-image:url("RPGBackground.png")
+}
+/* loggan i mitten på navbar */
+nav img {
+    margin: 0 10px;
+    max-height: 80px;
+    margin-top: 5px;
+}
+
+
+.section {
+  height: fit-content;
+  min-height: 800px;
+  background-color: #0A323C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.sectionGAMES{
+	background: none;
+}
+
+.title {
+	color: #FBB03B;
+	font-size: 5rem;
+	font-family: "Titel", san-serif;
+}
+
+.article-container {
+	flex: 1;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	gap: 40px;
+}
+
+.article-containerGAMES{
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 100%;
+	gap: 10%;
+	padding-top: 15%;
+}
+
+.article-containerRPG {
+	flex: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+	gap: 40px;
+}
+
+.article {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	place-items: center;
+	flex: 1;
+	background-color: #105669;
+	border-radius: 10px;
+	color: #FBB03B;
+	font-size: 1.5rem;
+	text-align: center;
+	border: 10px solid #091428
+}
+
+.articleMORE {
+	background-color: #105669;
+	font-size: 20px;
+	text-align: center;
+	color: #FBB03B;
+	padding: 2%;
+  	background-clip: padding-box;
+	border: 10px solid #091428
+}
+
+.articleGAMES {
+	height: fit-content;
+	width: 35%;
+	padding: 2.5%;
+	border: 10px solid #091428
+}
+
+.sectionMORE {
+  width: 1300px;
+  height: fit-content;
+  min-height: 600px;
+  background-color: #0A323C;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  padding: 40px;
+  box-sizing: border-box;
+
+
+}
+
+.article img {
+	width: 100%;
+	height:100%;
+}
+
+.articleARCANE{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	background-color: #091428;
+	margin-top: 5%;
+	margin-right: 2.5%;
+	width:50%;
+	height: fit-content;
+	min-height: 65%;
+	float: right;
+	border-radius: 60px;
+	gap: 40px;
+	padding: 2.5%;
+	
+}
+
+.articleARCANEHeader{
+	color: #FBB03B;
+	font-size: 3rem;
+	text-align: center;
+}
+
+.articleARCANEText{
+	justify-content: center;
+	text-align: center;
+	font-size: 1.5rem;
+	color: #FBB03B;
+	
+}
+/* egenskaper för h3 */
+h3{
+	color:#FBB03B;
+}
+
+/* förändringar när fönstret blir mindre */
+@media (max-width: 768px) {
+	
+    nav button {
+        font-size: 20px;
+    }
+	
+	main {
+		background-image: none;
+		background-color: #0a323c;
+	}
+	
+	.articleARCANEHeader{
+		font-size: 2rem;
+	}
+	
+	.articleARCANEText{
+		font-size: 1rem;
+	}
+	
+	.mainGAMES{
+		background-image: none;
+		background-color: #091428;
+	}
+	.article-news-image {
+		display: none;
+	}
+}

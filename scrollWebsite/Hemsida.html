@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPGhemsidaSCROLL</title>
+    <link rel="stylesheet" href="Cssss.css">
+</head>
+<body>
+    <!-- Navigationsmeny -->
+    <div class="nav">
+        <div class="button-container">
+            <a href="#main" class="button">Home</a>
+            <a href="#page1" class="button">RPG</a>
+            <a href="#page2" class="button">Games</a>
+            <a href="#page3" class="button">More</a>
+            <a href="#page4" class="button">Arcane</a>
+        </div>
+    </div>
+    <!-- Huvudsektionen -->
+    <div class="main section" id="main"></div>
+    <!-- RPG sektionen -->
+    <div class="page1 section" id="page1">
+        <div class="page1TEXT">"Role-playing Games"</div>
+        <div class="page1BOX">
+            <div class="page1TEXTBOX">
+                <!-- RPG beskrivningen -->
+                RPG, or Role-Playing Game, is a genre focused on immersive storytelling and character development. Players assume roles in fictional worlds, customizing abilities and navigating open environments with quests. Strong emphasis is placed on player choices, influencing the narrative. RPGs feature diverse settings and gameplay styles, seen in series like Final Fantasy and The Elder Scrolls.
+            </div>
+            <div class="page1PICTUREBOX"></div>
+        </div>
+    </div>
+    <!-- Games sektionen -->
+    <div class="page2 section" id="page2">
+        <div class="page2TEXT">GAMES</div>
+        <div class="page2BOX">
+            <div class="page2TEXTBOX">
+                <!-- Final Fantasy beskrivningen -->
+                "Final Fantasy", a groundbreaking video game series, captivates players with its rich narratives, fantastical worlds, and iconic characters. Created by Square Enix, the franchise has evolved over decades, setting new standards for role-playing games. Each installment introduces a unique universe, blending magic, technology, and intricate storytelling. From classic turn-based battles to real-time action, Final Fantasy consistently delivers immersive gameplay. With breathtaking graphics and emotional soundtracks, it has become a cultural phenomenon, leaving an indelible mark on the gaming industry and the hearts of millions worldwide."
+            </div>
+        </div>
+        <div class="page2PICTUREBOX"></div>
+        <div class="page2BOX">
+            <div class="page2TEXTBOX">
+                <!-- League of Legends beskrivningen -->
+                "League of Legends", an esports titan, has revolutionized the gaming landscape since its 2009 debut. Developed by Riot Games, the multiplayer online battle arena (MOBA) has amassed a global following, with millions engaging in intense strategic battles. Its constantly evolving meta, diverse champions, and competitive scene have solidified its status as a cultural phenomenon. With regular updates, innovative gameplay, and an expansive community, League of Legends stands as a pinnacle in competitive gaming, shaping the esports industry and thrilling players worldwide."
+            </div>
+        </div>
+    </div>
+    <!-- More sektionen -->
+    <div class="page3 section" id="page3">
+        <div class="page3TEXT">MORE</div>
+        <div class="page3BOX">
+            <div class="page3TEXTBOX">
+                <!-- RPG faktan -->
+                Did You Know? In the world of RPGs, your character's fate can hinge on the roll of a 20-sided die, but did you know that the iconic d20 design was not always standard? In the early days, Gary Gygax, co-creator of Dungeons and Dragons, used a 12-sided die and glued numbers on it for his first role-playing game. The shift to the now-famous 20 sides happened later, forever altering the destiny of countless imaginary heroes and villains.
+            </div>
+        </div>
+        <div class="page3PICTUREBOX"></div>
+        <div class="page3BOX">
+            <div class="page3TEXTBOX">
+                <!-- RPG inventory-text -->
+                Ever wonder how RPG characters carry so much stuff? In the real world, it might be a struggle to manage a backpack, but not for our intrepid adventurers. The average RPG character can haul around tons of gear without breaking a sweat. To put it in perspective, the weight of their inventory would make even the most seasoned backpacker jealous. Forget about packing light; in the RPG realm, characters are the ultimate overburdened travelers.
+            </div>
+        </div>
+    </div>
+    <!-- Arcane youtube-videon inbäddad -->
+    <div class="page4 section" id="page4">
+        <iframe src="https://www.youtube.com/embed/M9GeSbz9478?si=QJnPhTUI9xULWikM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="youtubeBox"></iframe>
+    </div>
+	
+    <!-- Javascript för sektioner och navigationsknappar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".section");
+            const navButtons = document.querySelectorAll(".button");
+
+            function updateActiveSection() {
+                const scrollPosition = window.scrollY;
+
+                sections.forEach((section, index) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        // Markerar nuvarande navigationsknapp
+                        navButtons.forEach(button => button.classList.remove("active"));
+                        navButtons[index].classList.add("active");
+                    }
+                });
+            }
+
+            // Kontroll när sidan startas
+            updateActiveSection();
+
+            // Känner av scroll
+            window.addEventListener("scroll", updateActiveSection);
+        });
+    </script>
+</body>
+</html>
